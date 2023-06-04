@@ -1,0 +1,58 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #161623;
+
+  /*Variables of The Style */
+  --custom-width: 300px;
+  --custom-height: 300px;
+  --gradient: #fd004c, #fe9000, #fff020, #3edf4b, #3363ff, #b102b7, #b102b7,
+    #3363ff, #3edf4b, #fff020, #fe9000, #fd004c;
+}
+
+/*DONT CHANGE THE CODE BELOW*/
+.gradient {
+  width: var(--custom-width);
+  position: relative;
+  margin: 80px auto 0;
+  height: var(--custom-height);
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.gradient::before,
+.gradient::after {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  content: "";
+  border-radius: 20px;
+  background: linear-gradient(45deg, var(--gradient));
+  background-size: 400% 400%;
+  align-items: center;
+  animation: spin 3s infinite linear alternate;
+}
+
+.gradient::after {
+  filter: blur(20px);
+}
+.cover {
+  z-index: 1;
+  width: calc(var(--custom-width) - 20px);
+  position: relative;
+  height: calc(var(--custom-height) - 20px);
+  justify-content: center;
+  display: flex;
+  border-radius: 20px;
+  background: #161623;
+  align-items: center;
+}
+
+@keyframes spin {
+  0% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}

@@ -1,0 +1,35 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #161623;
+}
+
+.container {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  position: absolute;
+  left: 50%;
+}
+
+.button {
+  width: 250px;
+  position: relative;
+  perspective: 300px;
+  padding: 40px;
+  transition: 1.5s;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 5px;
+  font-weight: 400;
+  font-size: 35px;
+  font-family: poppins;
+  cursor: pointer;
+  color: #00ffff;
+  border-radius: 100px;
+  border: 5px solid;
+  background: #161623;
+}
+
+.button:hover {
+  box-shadow: 0 5px 30px 0 #00ffff inset, 0 5px 50px 0 #00ffff;
+}

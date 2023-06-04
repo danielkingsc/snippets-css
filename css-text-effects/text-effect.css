@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  background-color: #161623;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h2 {
+  position: relative;
+  font-size: 3em;
+  color: #362828;
+  text-transform: uppercase;
+}
+
+h2::before {
+  content: attr(data-text);
+  position: absolute;
+  color: white;
+  overflow: hidden;
+  width: 350px;
+  white-space: nowrap;
+  text-decoration: underline;
+  border-right: 5px solid white;
+  animation: fill 8s linear infinite;
+  filter: drop-shadow(0 0 20px white) drop-shadow(0 0 50px white);
+}
+
+@keyframes fill {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+}
